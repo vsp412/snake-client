@@ -1,5 +1,6 @@
 let connection;
 const net = require('net');
+const connect = require('./client');
 
 const handleUserInput = (s) => {
 
@@ -9,7 +10,7 @@ const handleUserInput = (s) => {
     } 
 
     if (k === 'w') {
-      connection.write('Move: up');
+      connection.write('Move: up');     
     }
 
     if (k === 's') {
@@ -23,6 +24,10 @@ const handleUserInput = (s) => {
     if (k === 'd') {
       connection.write('Move: right');
     } 
+
+    if (k === '@') {
+      connection.write('Say: hello im vineet');
+    }
   });
 }
 

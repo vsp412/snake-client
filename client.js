@@ -1,9 +1,10 @@
 
 const net = require('net');
+const co = require('./constants');
 const connect = function() {
   const conn = net.createConnection({ 
-    host: 'localhost',
-    port: 50541
+    host: co.IP,
+    port: co.PORT
   });
   conn.on('connect', () => {
      console.log("Successfully connected to game server")
@@ -12,6 +13,7 @@ const connect = function() {
     // setInterval(() => {conn.write('Move: up');
     // }, 1000);
     conn.write('Name: VSP');
+    
     
 
   })

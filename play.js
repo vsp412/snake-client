@@ -8,7 +8,7 @@ const setupInput = require('./input');
 
 
 console.log('Connecting ...');
-connect();
+let c = connect();
 
 /**
  * Setup User Interface 
@@ -16,5 +16,5 @@ connect();
  */
 
 
-setupInput();
+setupInput(c);
 

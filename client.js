@@ -6,7 +6,7 @@ const connect = function() {
     port: 50541
   });
   conn.on('connect', () => {
-    console.log("Successfully connected to game server")
+     console.log("Successfully connected to game server")
     // conn.write('Move: up');
 
     // setInterval(() => {conn.write('Move: up');

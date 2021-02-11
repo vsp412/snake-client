@@ -7,7 +7,13 @@ const connect = function() {
   });
   conn.on('connect', () => {
     console.log("Successfully connected to game server")
+    // conn.write('Move: up');
+
+    // setInterval(() => {conn.write('Move: up');
+    // }, 1000);
     conn.write('Name: VSP');
+    
+
   })
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
